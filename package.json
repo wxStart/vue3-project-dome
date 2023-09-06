@@ -1,5 +1,5 @@
 {
-  "name": "project-template",
+  "name": "vue-project-dome",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,7 @@
     "predev": "node ./scripts/preinstall.js",
     "dev": "vite",
     "prebuild": "node ./scripts/preinstall.js",
-    "build": "run-p type-check build-only",
+    "build": "run-p  type-check build-only",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
@@ -18,17 +18,13 @@
     "check-conflict": "bash .husky/check-conflict.sh",
     "check-keyword": "bash .husky/check-keyword.sh"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "lint-staged": {
     "**/*.{js,jsx,ts,tsx,vue,json}": [
       "prettier --write src/"
     ]
   },
   "dependencies": {
+    "element-plus": "^2.3.12",
     "pinia": "^2.1.6",
     "vue": "^3.3.4",
     "vue-router": "^4.2.4"
