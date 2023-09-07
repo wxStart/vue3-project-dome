@@ -5,7 +5,9 @@
   "scripts": {
     "preinstall": "node ./scripts/preinstall.js",
     "predev": "node ./scripts/preinstall.js",
-    "dev": "vite",
+    "dev": "vite  --mode development",
+    "pretest": "node ./scripts/preinstall.js",
+    "test": "vite  --mode test",
     "prebuild": "node ./scripts/preinstall.js",
     "build": "run-p  type-check build-only",
     "preview": "vite preview",
