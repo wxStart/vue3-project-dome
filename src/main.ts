@@ -18,7 +18,11 @@ app.use(ElementPlus, {
   locale: zhCn
 })
 
+//  引入自定义插件对象：注册整个项目的全局组件
+import GlobalComponent from './components/index'
+
 app.use(createPinia())
 app.use(router)
+app.use(GlobalComponent)
 
 app.mount('#app')
